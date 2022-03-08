@@ -3,6 +3,9 @@ import Button from './Button.js';
 export default {
   title: 'components/Button',
   component: Button,
+  argTypes: {
+    onClick: 'clicked',
+  },
 };
 
 const Template = args => <Button {...args} />;
