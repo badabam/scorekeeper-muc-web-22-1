@@ -7,3 +7,10 @@ body {
   font-size: 112.5%;
   line-height: 1.5;
 }
+
+input,
+label,
+textarea,
+button {
+  font-size: 1em;
+}

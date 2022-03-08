@@ -1,14 +1,14 @@
-import Player from './ Player.js'
+import Player from './ Player.js';
 
 export default {
   title: 'components/Player',
-  component: Player
-}
+  component: Player,
+};
 
-const Template = args => <Player {...args} />
+const Template = args => <Player {...args} />;
 
-export const Default = Template.bind({})
+export const Default = Template.bind({});
 Default.args = {
   name: 'Jane Doe',
-  score: 10
-}
+  score: 10,
+};
