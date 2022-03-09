@@ -1,16 +1,39 @@
 import styled from 'styled-components';
 
-export default function Button({ children, onClick, isDark }) {
+export default function Button({
+  children,
+  onClick,
+  isDark,
+  fullWidth,
+  as = 'button',
+  ...props
+}) {
   return (
-    <ButtonStyled isDark={isDark} onClick={onClick}>
+    <ButtonStyled
+      as={as}
+      className={isDark && 'active'}
+      onClick={onClick}
+      fullWidth={fullWidth}
+      {...props}
+    >
       {children}
     </ButtonStyled>
   );
 }
 
 const ButtonStyled = styled.button`
-  background-color: ${props => (props.isDark ? '#666' : '#ddd')};
-  color: ${props => (props.isDark ? 'white' : 'inherit')};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
   border: none;
+  text-decoration: none;
   padding: 4px 12px;
+  color: inherit;
+  ${props => props.fullWidth && 'width: 100%;'}
+
+  &.active {
+    background-color: #666;
+    color: white;
+  }
 `;

@@ -20,3 +20,8 @@ Dark.args = {
   children: 'Click me',
   isDark: true,
 };
+export const FullWidth = Template.bind({});
+FullWidth.args = {
+  children: 'Click me',
+  fullWidth: true,
+};
